@@ -26,6 +26,36 @@ struct ContentView: View {
                 // MARK: - MAIN VIEW
                 VStack {
                     // MARK: - HEADER
+                    
+                    HStack(spacing: 10) {
+                        // MARK: - TITLE
+                        Text("Devote")
+                            .font(.system(.largeTitle, design: .rounded))
+                            .fontWeight(.heavy)
+                            .padding(.leading, 4)
+                        
+                        Spacer()
+                        
+                        // MARK: - EDIT BUTTON
+                        
+                        EditButton()
+                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .padding(.horizontal, 10)
+                            .frame(minWidth: 70, minHeight: 24)
+                            .background(Capsule().stroke(.white, lineWidth: 2))
+                        
+                        // MARK: - APPEARANCE BUTTON
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(systemName: "moon.circle")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                        })
+                        
+                    }//: HSTACK
+                    .foregroundColor(.white)
+                    
                     Spacer(minLength: 80)
                     
                     // MARK: - NEW TASK BUTTON
@@ -88,14 +118,10 @@ struct ContentView: View {
                 
             }//: ZSTACK
             .navigationBarTitle("Daily Tasks")
+            .navigationBarHidden(true)
             ///JJ Fix: Here as well, the tutorial put .background as modifier on the .toolbar{} but that didn't work, it had to be on the ZStack
             .background(BackgroundImageView())
             .background(backgroundGradient)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-            }
             
         } detail: {
             Text("Select an item")
