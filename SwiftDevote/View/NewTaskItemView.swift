@@ -13,6 +13,8 @@ struct NewTaskItemView: View {
     
     @State private var task: String = ""
     
+    @Binding var isShowing: Bool
+    
     private var isButtonDisabled: Bool {
         task.isEmpty
     }
@@ -26,6 +28,7 @@ struct NewTaskItemView: View {
         }
         
         task = ""
+        isShowing = false
     }
     
     // MARK: - BODY
@@ -73,6 +76,6 @@ struct NewTaskItemView: View {
 }
 
 #Preview {
-    NewTaskItemView()
+    NewTaskItemView(isShowing: .constant(true))
         .background(.gray).ignoresSafeArea(.all)
 }
