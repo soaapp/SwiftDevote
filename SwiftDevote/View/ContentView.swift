@@ -11,9 +11,10 @@ import SwiftData
 
 struct ContentView: View {
     // MARK: - 1. PROPERTIES
+    ///isDarkMode key from UserDefaults
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @State var task: String = ""
     @State private var showNewTaskItem: Bool = false
-    
     
     
     @Environment(\.modelContext) private var modelContext
@@ -46,14 +47,15 @@ struct ContentView: View {
                         
                         // MARK: - APPEARANCE BUTTON
                         Button(action: {
-                            
+                            isDarkMode.toggle()
                         }, label: {
-                            Image(systemName: "moon.circle")
+                            Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
                                 .resizable()
                                 .frame(width: 24, height: 24)
                         })
                         
                     }//: HSTACK
+                    .padding(.horizontal, 10)
                     .foregroundColor(.white)
                     
                     Spacer(minLength: 80)
@@ -78,35 +80,47 @@ struct ContentView: View {
                     
                     List {
                         ForEach(items) { item in
-                            NavigationLink {
-                                VStack(alignment: .leading) {
-                                    Text(item.task)
-                                        
-                                    Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                                        
-                                }
-                            } label: {
-                                VStack(alignment: .leading) {
-                                    Text(item.task)
-                                        .font(.headline)
-                                        .fontWeight(.heavy)
-                                    Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
+                            ZStack {
+                                HStack {
+                                    Button(action: {
+                                        item.completion.toggle()
+                                    }, label: {
+                                        Image(systemName: item.completion ? "checkmark.circle.fill" : "circle" )
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 30)
+                                            .foregroundColor( item.completion ? .pink : .primary)
+                                    })
+                                    VStack(alignment: .leading) {
+                                        Text(item.task)
+                                            .font(.title2)
+                                            .fontWeight(.heavy)
+                                            .foregroundColor(item.completion ? .pink : .primary)
+                                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                                            .font(.footnote)
+                                            .foregroundColor(.gray)
+                                    }
                                 }
                             }
+                            
                         }
                         .onDelete(perform: deleteItems)
+                        
+                        
                     }//: LIST
                     .scrollContentBackground(.hidden)
                     .shadow(color: .black.opacity(3), radius: 12)
                     .frame(maxWidth: 640)
                 }//: VSTACK
-                
+                .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
+                .transition(.move(edge: .bottom))
+                .animation(.easeOut(duration: 0.5))
                 // MARK: - NEW TASK LIST
                 
                 if showNewTaskItem {
-                    BlankView()
+                    BlankView(
+                        backgroundColor: isDarkMode ? .black : .gray,
+                        backgroundOpacity: isDarkMode ? 0.3 : 0.5)
                         .onTapGesture {
                             withAnimation() {
                                 showNewTaskItem = false
@@ -120,7 +134,10 @@ struct ContentView: View {
             .navigationBarTitle("Daily Tasks")
             .navigationBarHidden(true)
             ///JJ Fix: Here as well, the tutorial put .background as modifier on the .toolbar{} but that didn't work, it had to be on the ZStack
-            .background(BackgroundImageView())
+            .background(
+                BackgroundImageView()
+                    .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
+            )
             .background(backgroundGradient)
             
         } detail: {

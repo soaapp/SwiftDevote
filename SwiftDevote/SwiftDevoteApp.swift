@@ -22,10 +22,13 @@ struct SwiftDevoteApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    @AppStorage("isDarkMode") var isDarkMode: Bool = false
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
         .modelContainer(sharedModelContainer)
     }
