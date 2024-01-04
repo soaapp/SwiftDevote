@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		EF46BEF72B46161600722161 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46BEF62B46161600722161 /* NewTaskItemView.swift */; };
 		EF46BEFB2B46210200722161 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46BEFA2B46210200722161 /* BlankView.swift */; };
+		EF46BF372B47308D00722161 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF46BF042B47300D00722161 /* WidgetKit.framework */; };
+		EF46BF382B47308D00722161 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF46BF062B47300D00722161 /* SwiftUI.framework */; };
+		EF46BF3B2B47308D00722161 /* SwiftDevoteWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46BF3A2B47308D00722161 /* SwiftDevoteWidgetBundle.swift */; };
+		EF46BF3D2B47308D00722161 /* SwiftDevoteWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46BF3C2B47308D00722161 /* SwiftDevoteWidgetLiveActivity.swift */; };
+		EF46BF3F2B47308D00722161 /* SwiftDevoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46BF3E2B47308D00722161 /* SwiftDevoteWidget.swift */; };
+		EF46BF412B47308D00722161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF46BF402B47308D00722161 /* Assets.xcassets */; };
+		EF46BF452B47308D00722161 /* SwiftDevoteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EF46BF362B47308D00722161 /* SwiftDevoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF46BF492B473C4D00722161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5D4A4C2B3EA8F8001F0268 /* Assets.xcassets */; };
+		EF46BF4A2B47468A00722161 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D4A562B3EAD60001F0268 /* Constant.swift */; };
 		EF5D4A472B3EA8F7001F0268 /* SwiftDevoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D4A462B3EA8F7001F0268 /* SwiftDevoteApp.swift */; };
 		EF5D4A492B3EA8F7001F0268 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D4A482B3EA8F7001F0268 /* ContentView.swift */; };
 		EF5D4A4B2B3EA8F7001F0268 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D4A4A2B3EA8F7001F0268 /* Item.swift */; };
@@ -18,9 +27,41 @@
 		EF5D4A5E2B3EB749001F0268 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D4A5D2B3EB749001F0268 /* BackgroundImageView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EF46BF432B47308D00722161 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF5D4A3B2B3EA8F7001F0268 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF46BF352B47308D00722161;
+			remoteInfo = SwiftDevoteWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF46BF1A2B47300E00722161 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EF46BF452B47308D00722161 /* SwiftDevoteWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EF46BEF62B46161600722161 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		EF46BEFA2B46210200722161 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		EF46BF042B47300D00722161 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		EF46BF062B47300D00722161 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EF46BF362B47308D00722161 /* SwiftDevoteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftDevoteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF46BF3A2B47308D00722161 /* SwiftDevoteWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDevoteWidgetBundle.swift; sourceTree = "<group>"; };
+		EF46BF3C2B47308D00722161 /* SwiftDevoteWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDevoteWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		EF46BF3E2B47308D00722161 /* SwiftDevoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDevoteWidget.swift; sourceTree = "<group>"; };
+		EF46BF402B47308D00722161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF46BF422B47308D00722161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF5D4A432B3EA8F7001F0268 /* SwiftDevote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDevote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5D4A462B3EA8F7001F0268 /* SwiftDevoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDevoteApp.swift; sourceTree = "<group>"; };
 		EF5D4A482B3EA8F7001F0268 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +74,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EF46BF332B47308D00722161 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF46BF382B47308D00722161 /* SwiftUI.framework in Frameworks */,
+				EF46BF372B47308D00722161 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF5D4A402B3EA8F7001F0268 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +93,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF46BF032B47300D00722161 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF46BF042B47300D00722161 /* WidgetKit.framework */,
+				EF46BF062B47300D00722161 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF46BF392B47308D00722161 /* SwiftDevoteWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EF46BF3A2B47308D00722161 /* SwiftDevoteWidgetBundle.swift */,
+				EF46BF3C2B47308D00722161 /* SwiftDevoteWidgetLiveActivity.swift */,
+				EF46BF3E2B47308D00722161 /* SwiftDevoteWidget.swift */,
+				EF46BF402B47308D00722161 /* Assets.xcassets */,
+				EF46BF422B47308D00722161 /* Info.plist */,
+			);
+			path = SwiftDevoteWidget;
+			sourceTree = "<group>";
+		};
 		EF5D4A3A2B3EA8F7001F0268 = {
 			isa = PBXGroup;
 			children = (
 				EF5D4A452B3EA8F7001F0268 /* SwiftDevote */,
+				EF46BF392B47308D00722161 /* SwiftDevoteWidget */,
+				EF46BF032B47300D00722161 /* Frameworks */,
 				EF5D4A442B3EA8F7001F0268 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				EF5D4A432B3EA8F7001F0268 /* SwiftDevote.app */,
+				EF46BF362B47308D00722161 /* SwiftDevoteWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +185,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EF46BF352B47308D00722161 /* SwiftDevoteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF46BF462B47308E00722161 /* Build configuration list for PBXNativeTarget "SwiftDevoteWidgetExtension" */;
+			buildPhases = (
+				EF46BF322B47308D00722161 /* Sources */,
+				EF46BF332B47308D00722161 /* Frameworks */,
+				EF46BF342B47308D00722161 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftDevoteWidgetExtension;
+			productName = SwiftDevoteWidgetExtension;
+			productReference = EF46BF362B47308D00722161 /* SwiftDevoteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		EF5D4A422B3EA8F7001F0268 /* SwiftDevote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF5D4A532B3EA8F8001F0268 /* Build configuration list for PBXNativeTarget "SwiftDevote" */;
@@ -118,10 +209,12 @@
 				EF5D4A3F2B3EA8F7001F0268 /* Sources */,
 				EF5D4A402B3EA8F7001F0268 /* Frameworks */,
 				EF5D4A412B3EA8F7001F0268 /* Resources */,
+				EF46BF1A2B47300E00722161 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EF46BF442B47308D00722161 /* PBXTargetDependency */,
 			);
 			name = SwiftDevote;
 			productName = SwiftDevote;
@@ -138,6 +231,9 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					EF46BF352B47308D00722161 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					EF5D4A422B3EA8F7001F0268 = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -157,11 +253,21 @@
 			projectRoot = "";
 			targets = (
 				EF5D4A422B3EA8F7001F0268 /* SwiftDevote */,
+				EF46BF352B47308D00722161 /* SwiftDevoteWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EF46BF342B47308D00722161 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF46BF492B473C4D00722161 /* Assets.xcassets in Resources */,
+				EF46BF412B47308D00722161 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF5D4A412B3EA8F7001F0268 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +280,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EF46BF322B47308D00722161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF46BF3B2B47308D00722161 /* SwiftDevoteWidgetBundle.swift in Sources */,
+				EF46BF3F2B47308D00722161 /* SwiftDevoteWidget.swift in Sources */,
+				EF46BF3D2B47308D00722161 /* SwiftDevoteWidgetLiveActivity.swift in Sources */,
+				EF46BF4A2B47468A00722161 /* Constant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF5D4A3F2B3EA8F7001F0268 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,7 +307,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EF46BF442B47308D00722161 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF46BF352B47308D00722161 /* SwiftDevoteWidgetExtension */;
+			targetProxy = EF46BF432B47308D00722161 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EF46BF472B47308E00722161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5PULWA79J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftDevoteWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SwiftDevoteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jj.SwiftDevote.SwiftDevoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF46BF482B47308E00722161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5PULWA79J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftDevoteWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SwiftDevoteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jj.SwiftDevote.SwiftDevoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EF5D4A512B3EA8F8001F0268 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -313,6 +492,7 @@
 		EF5D4A542B3EA8F8001F0268 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -342,6 +522,7 @@
 		EF5D4A552B3EA8F8001F0268 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -371,6 +552,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EF46BF462B47308E00722161 /* Build configuration list for PBXNativeTarget "SwiftDevoteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF46BF472B47308E00722161 /* Debug */,
+				EF46BF482B47308E00722161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EF5D4A3E2B3EA8F7001F0268 /* Build configuration list for PBXProject "SwiftDevote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
